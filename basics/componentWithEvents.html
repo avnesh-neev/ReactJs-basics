@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8" />
+	<title>ReactJsLearning</title>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/react/0.13.3/react.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/react/0.13.3/JSXTransformer.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+</head>
+<body>
+<div id="content"></div>
+    <script type="text/jsx">	
+		/**
+			* @class
+			* @name AvneshComponent
+			*
+			* @description
+			* View using Events
+		*/
+		var AvneshComponent = React.createClass({
+			/**
+			   * @method
+			   * @name AvneshComponent#checkEvent
+			   *
+			   * @description
+			   * Renders the content onClick.
+			*/
+			checkEvent: function() {
+				console.log("About User: ", this.props.children);
+			},
+
+			/**
+			   * @method
+			   * @name AvneshComponent#render
+			   *
+			   * @description
+			   * Renders the content of the page.
+			   *
+			   * @returns HTML to be rendered.
+			*/
+	   		render: function() {
+	   			return (
+	   				<div>
+	   					<h3>{this.props.name}</h3>
+	   					<a onClick={this.checkEvent} href="javascript:void(0)">Click here</a>
+	   				</div>
+	   				);
+	   		}
+	   });
+	
+		React.render(
+			<div>
+				<AvneshComponent name="Avnesh Shakya">
+					I am working on Javascript
+				</AvneshComponent>
+				<AvneshComponent name="Murali K.">
+					I am working on RoR
+				</AvneshComponent>
+			</div>,
+			document.getElementById('content')
+
+		);
+	    
+    </script>
+</body>
+</html>

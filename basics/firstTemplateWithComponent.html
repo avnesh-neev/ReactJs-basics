@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8" />
+	<title>ReactJsLearning</title>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/react/0.13.3/react.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/react/0.13.3/JSXTransformer.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+</head>
+<body>
+<div id="content"></div>
+    <script type="text/jsx">
+	    /**
+			* @class
+			* @name AvneshComponent
+			*
+			* @description
+			* View First Component with simple html view.
+		*/
+    	var AvneshComponent = React.createClass({
+    		/**
+			   * @method
+			   * @name AvneshComponent#render
+			   *
+			   * @description
+			   * Renders the content of the page.
+			   *
+			   * @returns HTML to be rendered.
+			*/
+    		render: function() {
+    			return (
+    				<h5> My name is Avnesh Shakya, am from Etawah</h5>
+    				);
+    		}
+    	});
+
+		React.render(<AvneshComponent />, document.getElementById('content'));
+	    
+    </script>
+</body>
+</html>
